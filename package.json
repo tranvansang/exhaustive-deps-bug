@@ -1,0 +1,15 @@
+{
+  "name": "exhaustive-deps-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tran Sang <tr@nsang.me>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.12.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "react": "^17.0.1"
+  },
+  "scripts": {
+	  "test": "yarn eslint index.js"
+  }
+}

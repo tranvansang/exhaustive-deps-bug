@@ -1,7 +1,7 @@
 {
 	"parserOptions": {
 		"sourceType": "module",
-		"ecmaVersion": 6
+		"ecmaVersion": 11
 	},
 	"plugins": [
 		"react-hooks"
@@ -12,7 +12,7 @@
 	"rules": {
 		"react-hooks/exhaustive-deps": [
 			"warn", {
-				"additionalHooks": "(useEffectWithPrevDeps|useAsyncEffect|useAsyncEffectWithPrevDeps)"
+				"additionalHooks": "(useAsyncEffect)"
 			}
 		]
 	}

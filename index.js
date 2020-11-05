@@ -1,12 +1,12 @@
-export const useEffectWithPrevDeps = (effect, deps) => {
-	const depsRef = useRef()
-	useEffect(
-		() => {
-			const {current} = depsRef
-			depsRef.current = deps
-			return effect(current)
-		},
-		deps
-	)
-}
+export const useAsyncEffect = (effect, deps) => useEffect(
+	() => void (async () => {
+		try {
+			await effect()
+		} catch (e) {
+			// report error
+			console.error(e)
+		}
+	})(),
+	deps
+)
 
